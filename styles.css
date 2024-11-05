@@ -45,6 +45,7 @@ ul {
 .nav-container {
     display: flex;
     justify-content: space-between;
+    font-size: 1.1rem;
     margin: 0 auto;
     max-width: 90%;
     align-items: center;
@@ -75,4 +76,38 @@ ul {
     border: none;
     cursor: pointer;
     padding: 0 2rem;
+}
+
+/*About Section*/
+
+.about-section-container img {
+    object-fit: cover;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 5px;
+}
+
+.about-section-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70%;
+    margin: 5rem auto 0;
+}
+
+.about-section-text {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.about-section-text span {
+    color: var(--accent-text);
+}
+
+.about-section-text p {
+    padding-top: 0.5rem;
 }
