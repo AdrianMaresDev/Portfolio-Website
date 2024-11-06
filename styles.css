@@ -21,6 +21,13 @@ body{
     --accent-color: #1B3644;
 }
 
+.light-mode {
+    --bg-base: #fff;
+    --primary-text: #111111;
+    --accent-text: #606060;
+    --accent-color: #1B3644;
+}
+
 /*General Styling*/
 
 a {
@@ -45,7 +52,7 @@ ul {
 .nav-container {
     display: flex;
     justify-content: space-between;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0 auto;
     max-width: 90%;
     align-items: center;
@@ -70,7 +77,7 @@ ul {
     color: var(--primary-text);
 }
 
-.light-mode-toggle {
+#light-mode-toggle {
     background-color: var(--bg-base);
     color: var(--primary-text);
     border: none;
@@ -90,18 +97,19 @@ ul {
 .about-section-container {
     display: flex;
     justify-content: space-between;
-    max-width: 70%;
+    max-width: 60%;
     margin: 5rem auto 0;
 }
 
 .about-section-text {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .socials {
     display: flex;
     gap: 1rem;
+    padding-top: 0.5rem;
 }
 
 .about-section-text span {
