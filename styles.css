@@ -19,6 +19,7 @@ body{
     --primary-text: #fff;
     --accent-text: #606060;
     --accent-color: #1B3644;
+    --box-highlight: #222222;
 }
 
 .light-mode {
@@ -26,6 +27,7 @@ body{
     --primary-text: #111111;
     --accent-text: #606060;
     --accent-color: #1B3644;
+    --box-highlight: #8F9498;
 }
 
 /*General Styling*/
@@ -99,11 +101,15 @@ ul {
     justify-content: space-between;
     max-width: 60%;
     margin: 5rem auto 0;
+    border: 2px solid var(--box-highlight);
+    border-radius: 5px;
+    padding: 1.5rem;
 }
 
 .about-section-text {
     display: flex;
     gap: 2rem;
+    max-width: 90%;
 }
 
 .socials {
@@ -117,5 +123,6 @@ ul {
 }
 
 .about-section-text p {
-    padding-top: 0.5rem;
+    padding: 1.2rem 0;
+    font-size: 1.1rem;
 }
