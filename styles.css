@@ -150,12 +150,11 @@ h2 {
 
 .tech-stack-container {
     margin: 3rem auto 0;
-    max-width: 60%;
+    max-width: 50%;
 }
 
 .icon {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -164,5 +163,10 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
+    gap: 1.5rem;
+}
+
+.icon-scroller span {
+    padding-left: 0.5rem;
 }
