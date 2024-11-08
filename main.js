@@ -59,6 +59,7 @@ function resizeWindow() {
         });
         openNavToggle.style.display = 'none';
         closeNavToggle.style.display = 'none';
+        navMenu.classList.remove('open');
     } else {
         mobileHidden.forEach(element => {
             element.classList.add('mobile-hidden');
