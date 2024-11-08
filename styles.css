@@ -131,6 +131,7 @@ ul {
     .nav-buttons {
         position: relative;
         z-index: 101;
+        padding-right: 0;
     }
 }
 
@@ -157,6 +158,12 @@ ul {
     border: 2px solid var(--box-highlight);
     border-radius: 5px;
     padding: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .about-section-container {
+        max-width: 80%;
+    }
 }
 
 .about-section-text {
