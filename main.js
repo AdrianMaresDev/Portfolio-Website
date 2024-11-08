@@ -19,6 +19,31 @@ function lightModeToggle() {
     }
 }
 
+//Navigation Toggle
+
+const openNavToggle = document.getElementById('open-nav-toggle');
+const closeNavToggle = document.getElementById('close-nav-toggle');
+const mobileHidden = document.querySelectorAll('.mobile-hidden');
+
+openNavToggle.addEventListener('click', openNavbar);
+closeNavToggle.addEventListener('click', closeNavbar);
+
+function openNavbar() {
+    mobileHidden.forEach(element => {
+        element.classList.remove('mobile-hidden');
+        closeNavToggle.style.display = 'flex';
+        openNavToggle.style.display = 'none';
+    });
+}
+
+function closeNavbar() {
+    mobileHidden.forEach(element => {
+        element.classList.add('mobile-hidden');
+    });
+    openNavToggle.style.display = 'flex';
+    closeNavToggle.style.display = 'none';
+}
+
 //Skill Icon Scroller
 
 const scrollers = document.querySelectorAll('.scroller');

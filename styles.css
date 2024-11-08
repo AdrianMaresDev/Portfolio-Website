@@ -79,12 +79,37 @@ ul {
     color: var(--primary-text);
 }
 
-#light-mode-toggle {
+.nav-list.column {
+    flex-direction: column;
+}
+
+.nav-buttons {
+    padding: 0 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+#light-mode-toggle, #open-nav-toggle, #close-nav-toggle {
     background-color: var(--bg-base);
     color: var(--primary-text);
     border: none;
     cursor: pointer;
-    padding: 0 2rem;
+}
+
+#close-nav-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #open-nav-toggle, #close-nav-toggle {
+        display: none;
+    }
 }
 
 /*About Section*/
@@ -127,7 +152,7 @@ ul {
     font-size: 1.1rem;
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .about-section-text {
         flex-direction: column;
         align-items: center;
