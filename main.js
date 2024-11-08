@@ -24,11 +24,16 @@ function lightModeToggle() {
 const openNavToggle = document.getElementById('open-nav-toggle');
 const closeNavToggle = document.getElementById('close-nav-toggle');
 const mobileHidden = document.querySelectorAll('.mobile-hidden');
+const navMenu = document.querySelector('.nav-container ul');
 
 openNavToggle.addEventListener('click', openNavbar);
 closeNavToggle.addEventListener('click', closeNavbar);
+window.addEventListener('resize', resizeWindow);
+
+resizeWindow();
 
 function openNavbar() {
+    navMenu.classList.add('open');
     mobileHidden.forEach(element => {
         element.classList.remove('mobile-hidden');
         closeNavToggle.style.display = 'flex';
@@ -37,11 +42,30 @@ function openNavbar() {
 }
 
 function closeNavbar() {
+    navMenu.classList.remove('open');
     mobileHidden.forEach(element => {
         element.classList.add('mobile-hidden');
     });
     openNavToggle.style.display = 'flex';
     closeNavToggle.style.display = 'none';
+}
+
+//Handle icon visibility when the user resizes the window
+
+function resizeWindow() {
+    if (window.innerWidth > 900) {
+        mobileHidden.forEach(element => {
+            element.classList.remove('mobile-hidden');
+        });
+        openNavToggle.style.display = 'none';
+        closeNavToggle.style.display = 'none';
+    } else {
+        mobileHidden.forEach(element => {
+            element.classList.add('mobile-hidden');
+        });
+        openNavToggle.style.display = 'flex';
+        closeNavToggle.style.display = 'none';
+    }
 }
 
 //Skill Icon Scroller

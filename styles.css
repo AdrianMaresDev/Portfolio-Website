@@ -79,10 +79,6 @@ ul {
     color: var(--primary-text);
 }
 
-.nav-list.column {
-    flex-direction: column;
-}
-
 .nav-buttons {
     padding: 0 2rem;
     display: flex;
@@ -103,6 +99,29 @@ ul {
 @media screen and (max-width: 900px) {
     .mobile-hidden {
         display: none;
+    }
+    .nav-container ul {
+        padding: 0 2rem;
+        width: 100%;
+        background-color: transparent;
+        height: 100vh;
+        flex-direction: column;
+        position: fixed;
+        top: 10%;
+        right: 0;
+        z-index: 100;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+    .nav-container ul.open {
+        transform: translateX(0);
+        opacity: 1;
+        background-color: var(--bg-base);
+    }
+    .nav-buttons {
+        position: relative;
+        z-index: 101;
     }
 }
 
