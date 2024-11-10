@@ -128,6 +128,11 @@ ul {
         opacity: 1;
         background-color: var(--bg-base);
     }
+    .nav-container ul.close {
+        transform: translateX(100%);
+       opacity: 1;
+       background-color: var(--bg-base);
+   }
     .nav-buttons {
         position: relative;
         z-index: 101;
@@ -143,14 +148,14 @@ ul {
 
 /*About Section*/
 
-.about-section-container img {
+.section-container img {
     object-fit: cover;
     width: 15rem;
     height: 15rem;
     border-radius: 5px;
 }
 
-.about-section-container {
+.section-container {
     display: flex;
     justify-content: space-between;
     max-width: 60%;
@@ -161,7 +166,7 @@ ul {
 }
 
 @media screen and (max-width: 600px) {
-    .about-section-container {
+    .section-container {
         max-width: 80%;
     }
 }
@@ -192,7 +197,7 @@ ul {
         flex-direction: column;
         align-items: center;
     }
-    .about-section-container {
+    .section-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -206,7 +211,7 @@ ul {
 
 h2 {
     text-align: center;
-    padding: 3rem 0 2rem;
+    padding: 4rem 0 2rem;
 }
 
 .icon {
@@ -248,4 +253,41 @@ h2 {
     to {
         transform: translate(calc(-50% - 1rem));
     }
+}
+
+/*Projects Section*/
+
+h3 {
+    text-align: center;
+    padding-top: 4rem;
+    font-size: 1.5rem;
+}
+
+.projects {
+    border: none;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+
+.projects p {
+    margin: 0 auto;
+    color: var(--accent-text);
+}
+
+/*Figure out why this isn't centered*/
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 60%;
+    margin-top: 2rem;
+}
+
+.project-container img {
+    max-width: 27rem;
+    max-height: auto;
+    border-radius: 5px;
+    object-fit: cover;
 }

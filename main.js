@@ -34,15 +34,17 @@ resizeWindow();
 
 function openNavbar() {
     navMenu.classList.add('open');
+    navMenu.classList.remove('close');
     mobileHidden.forEach(element => {
         element.classList.remove('mobile-hidden');
-        closeNavToggle.style.display = 'flex';
-        openNavToggle.style.display = 'none';
     });
+    closeNavToggle.style.display = 'flex';
+    openNavToggle.style.display = 'none';
 }
 
 function closeNavbar() {
     navMenu.classList.remove('open');
+    navMenu.classList.add('close');
     mobileHidden.forEach(element => {
         element.classList.add('mobile-hidden');
     });
