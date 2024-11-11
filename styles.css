@@ -270,24 +270,25 @@ h3 {
 }
 
 .projects p {
-    margin: 0 auto;
-    color: var(--accent-text);
+    margin: 0 auto 1rem;
 }
 
-/*Figure out why this isn't centered*/
-
-.project-container {
+.projects-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 60%;
-    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem auto 0;
+    max-width: 70%;
+    gap: 2rem;
 }
 
-.project-container img {
-    max-width: 27rem;
-    max-height: auto;
-    border-radius: 5px;
+.projects-container img {
+    max-width: 30rem;
+    height: auto;
     object-fit: cover;
+    border-radius: 5px;
+}
+
+.projects-container span {
+    display: block;
 }
