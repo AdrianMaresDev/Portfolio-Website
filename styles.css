@@ -282,13 +282,41 @@ h3 {
     gap: 2rem;
 }
 
+@media screen and (max-width: 1200px) {
+    .projects-container {
+        max-width: 80%;
+    }
+}
+
 .projects-container img {
     max-width: 30rem;
     height: auto;
     object-fit: cover;
     border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.projects-container img:hover {
+    transform: scale(0.98);
 }
 
 .projects-container span {
     display: block;
+    padding-top: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.projects-container p {
+    font-size: 0.9rem;
+    color: var(--accent-text);
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0.2rem 0.4rem;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.projects-container a:hover p {
+    color: var(--primary-text);
 }
