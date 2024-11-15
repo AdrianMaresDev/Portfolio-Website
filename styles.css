@@ -60,6 +60,14 @@ ul {
     font-weight: 500;
 }
 
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--bg-base);
+    z-index: 102;
+}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -159,7 +167,7 @@ ul {
     display: flex;
     justify-content: space-between;
     max-width: 60%;
-    margin: 5rem auto 0;
+    margin: 8rem auto 0;
     border: 2px solid var(--box-highlight);
     border-radius: 5px;
     padding: 1.5rem;
@@ -221,7 +229,7 @@ h2 {
 }
 
 .scroller {
-    max-width: 50%;
+    max-width: 60%;
     margin: 0 auto;
 }
 
