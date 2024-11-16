@@ -52,6 +52,18 @@ function closeNavbar() {
     closeNavToggle.style.display = 'none';
 }
 
+//Change nav text color when the user scrolls down
+
+const navContainer = document.querySelector('.nav-container');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navContainer.classList.add('scrolled');
+    } else {
+        navContainer.classList.remove('scrolled');
+    }
+});
+
 //Handle icon visibility when the user resizes the window
 
 function resizeWindow() {

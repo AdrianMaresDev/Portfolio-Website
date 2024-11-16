@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-size: 16px;
     line-height: 1.5;
@@ -27,7 +31,7 @@ body{
     --bg-base: #111111;
     --primary-text: #fff;
     --accent-text: #606060;
-    --accent-color: #1B3644;
+    --accent-color: #088484;
     --box-highlight: #222222;
 }
 
@@ -35,7 +39,7 @@ body{
     --bg-base: #fff;
     --primary-text: #111111;
     --accent-text: #606060;
-    --accent-color: #1B3644;
+    --accent-color: #088484;
     --box-highlight: #8F9498;
 }
 
@@ -154,6 +158,16 @@ nav {
     }
 }
 
+/*Nav Items on scroll*/
+
+.nav-container.scrolled ul li a {
+    color: var(--accent-text);
+}
+
+.nav-container.scrolled ul li a:hover {
+    color: var(--primary-text);
+}
+
 /*About Section*/
 
 .section-container img {
@@ -171,9 +185,10 @@ nav {
     border: 2px solid var(--box-highlight);
     border-radius: 5px;
     padding: 1.5rem;
+    scroll-margin-top: 8rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .section-container {
         max-width: 80%;
     }
@@ -265,6 +280,10 @@ h2 {
 
 /*Projects Section*/
 
+#projects {
+    scroll-margin-top: 2rem;
+}
+
 h3 {
     text-align: center;
     padding-top: 4rem;
@@ -292,7 +311,8 @@ h3 {
 
 @media screen and (max-width: 1200px) {
     .projects-container {
-        max-width: 80%;
+        max-width: 100%;
+        padding: 0 1rem 0;
     }
 }
 
@@ -327,4 +347,63 @@ h3 {
 
 .projects-container a:hover p {
     color: var(--primary-text);
+}
+
+/*Experience Section*/
+
+#experience {
+    scroll-margin-top: 2rem;
+}
+
+.timeline-container {
+    position: relative;
+    border: none;
+    margin-top: 2.5rem;
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+}
+
+.timeline-row {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 4rem;
+}
+
+.timeline-row::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--accent-color);
+    border: 4px solid var(--primary-text);
+    border-radius: 50%;
+}
+
+.timeline-row:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 2rem;
+    left: 0.6rem;
+    width: 2px;
+    height: calc(100% + 4rem);
+    background-color: var(--primary-text);
+}
+
+.timeline-row p {
+    padding: 0.5rem 0;
+}
+
+.timeline-row span:last-of-type {
+    color: var(--accent-text);
 }
