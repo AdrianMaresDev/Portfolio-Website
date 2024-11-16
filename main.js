@@ -34,6 +34,7 @@ const openNavToggle = document.getElementById('open-nav-toggle');
 const closeNavToggle = document.getElementById('close-nav-toggle');
 const mobileHidden = document.querySelectorAll('.mobile-hidden');
 const navMenu = document.querySelector('.nav-container ul');
+const navLink = document.querySelectorAll('.nav-link');
 
 openNavToggle.addEventListener('click', openNavbar);
 closeNavToggle.addEventListener('click', closeNavbar);
@@ -60,6 +61,12 @@ function closeNavbar() {
     openNavToggle.style.display = 'flex';
     closeNavToggle.style.display = 'none';
 }
+
+//Close nav bar when a link is clicked
+
+navLink.forEach(link => {
+    link.addEventListener('click', closeNavbar);
+});
 
 //Change nav text color when the user scrolls down
 

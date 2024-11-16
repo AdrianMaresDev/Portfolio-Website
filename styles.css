@@ -125,7 +125,7 @@ nav {
         padding: 0 2rem;
         width: 100%;
         background-color: transparent;
-        height: 100vh;
+        height: 100%;
         flex-direction: column;
         position: fixed;
         top: 10%;
@@ -417,4 +417,44 @@ h4 {
 
 .timeline-row span:last-of-type {
     color: var(--accent-text);
+}
+
+/*Contact Section*/
+
+.contact-container {
+    margin: 2.5rem auto 5rem;
+    display: block;
+    text-align: center;
+    padding: 1.5rem 3rem;
+}
+
+@media screen and (max-width:800px) {
+    .contact-container {
+        padding: 1.5rem;
+    }
+}
+
+.contact-container h3 {
+    padding: 0 0 1.5rem 0;
+}
+
+.contact-container p {
+    padding-bottom: 1.5rem;
+}
+
+.contact-container div span {
+    display: block;
+    padding-bottom: 0.5rem;
+}
+
+/*Footer*/
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+footer svg {
+    vertical-align: middle;
 }
