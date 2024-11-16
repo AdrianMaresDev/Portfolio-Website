@@ -1,4 +1,13 @@
+//TEMPORARY Alert until ThriveTalk is deployed
+
+const thriveTalk = document.getElementById('thrive-talk');
+
+thriveTalk.addEventListener('click', () => {
+    alert("This site is currently being worked on and hasn't been deployed yet. Check back soon!")
+});
+
 //Light and Dark mode toggle
+
 const lightModeBtn = document.getElementById('light-mode-toggle');
 const darkToggle = document.getElementById('dark-toggle');
 const lightToggle = document.getElementById('light-toggle');
