@@ -324,6 +324,18 @@ h3 {
     transition: transform 0.3s ease;
 }
 
+@media screen and (max-width: 550px) {
+    .projects-container img {
+        max-width: 25rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .projects-container img {
+        max-width: 20rem;
+    }
+}
+
 .projects-container img:hover {
     transform: scale(0.98);
 }
