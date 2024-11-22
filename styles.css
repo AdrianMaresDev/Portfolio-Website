@@ -122,13 +122,13 @@ nav {
         display: none;
     }
     .nav-container ul {
-        padding: 0 2rem;
+        padding:  4rem 2rem;
         width: 100%;
         background-color: transparent;
         height: 100%;
         flex-direction: column;
         position: fixed;
-        top: 10%;
+        top: 0;
         right: 0;
         z-index: 100;
         transform: translateX(100%);

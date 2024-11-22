@@ -58,8 +58,13 @@ function closeNavbar() {
     mobileHidden.forEach(element => {
         element.classList.add('mobile-hidden');
     });
-    openNavToggle.style.display = 'flex';
-    closeNavToggle.style.display = 'none';
+    if (window.innerWidth <= 900) {
+        openNavToggle.style.display = 'flex';
+        closeNavToggle.style.display = 'none';
+    } else {
+        openNavToggle.style.display = 'none';
+        closeNavToggle.style.display = 'none';
+    }
 }
 
 //Close nav bar when a link is clicked
